@@ -100,4 +100,75 @@ In particular:
 ### Requirements
 
 - CMake 3.22 or newer
--
+- Git
+- C++17 compatible compiler
+- Internet connection for the initial JUCE download
+
+### Build
+
+```bash
+cmake -B build -DCMAKE_BUILD_TYPE=Release
+cmake --build build --config Release
+```
+
+On Windows, use the Visual Studio generator if necessary:
+
+```powershell
+cmake -B build -G "Visual Studio 18 2026" -A x64
+cmake --build build --config Release
+```
+
+The generated binaries are located in:
+
+```text
+build/Sixty_artefacts/Release/
+```
+
+### Linux dependencies (Debian/Ubuntu)
+
+```bash
+sudo apt install build-essential cmake git \
+libasound2-dev libfreetype-dev libfontconfig1-dev \
+libx11-dev libxcomposite-dev libxcursor-dev \
+libxext-dev libxinerama-dev libxrandr-dev \
+libxrender-dev libgl1-mesa-dev mesa-common-dev
+```
+
+## 🤝 Contributions
+
+Contributions are very welcome!
+
+I'm particularly interested in developers who have experience with:
+
+- Analog synthesizer circuit modelling.
+- IR3109 filter emulation.
+- BBD chorus modelling.
+- DCO architecture and oscillator behaviour.
+- DSP accuracy and optimization.
+- Oversampling and nonlinear processing.
+- C++ and JUCE plugin development.
+- Preset management and plugin architecture.
+
+You can contribute by opening issues, suggesting improvements, submitting pull requests or experimenting with your own modifications.
+
+Don't worry if you only have a small improvement to suggest. Every contribution helps.
+
+## 📜 Disclaimer
+
+Sixty is an independent experimental project inspired by the Roland Juno-60.
+
+It is not affiliated with, endorsed by or connected to Roland Corporation or Arturia.
+
+All trademarks belong to their respective owners.
+
+## Licensing
+
+Sixty uses JUCE 8 and is subject to the applicable JUCE licensing terms.
+
+The project's own distribution and licensing arrangements need to be established before redistribution.
+
+---
+
+**Built with Claude, curiosity and a lot of Vibe Coding.**
+
+*The code is here. The ambition is clear. Now let's see what the community can make of it.*
